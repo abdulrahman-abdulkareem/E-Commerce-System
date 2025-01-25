@@ -556,7 +556,8 @@ public class ShoppingGUI extends JFrame {
      * @param event - The ActionEvent object representing the button click event.
      */
 
-    private void showShoppingCart(ActionEvent event) {
+    @SuppressWarnings("unused")
+    private void showShoppingCart() {
 
         // Calculate the totals and update the cart display
         updateCartDisplay();
