@@ -33,7 +33,14 @@ public class ShoppingGUI extends JFrame {
 
     private JPanel cartPanel,productDetailsPanel;
 
-    private JLabel lblProductId,lblCategory,lblName,lblSize,lblColor,lblAvailable,lblBrand,lblWarranty;
+    private JLabel lblProductId;
+    private JLabel lblCategory;
+    private JLabel lblName;
+    private JLabel lblSize;
+    private JLabel lblColor;
+    private JLabel lblAvailable;
+    private JLabel lblBrand;
+    private JLabel lblWarranty;
 
     private User currentUser;
     private ShoppingCart shoppingCart;
