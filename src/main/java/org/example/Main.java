@@ -1,7 +1,5 @@
 package org.example;
-
 import javax.swing.*;
-
 import java.util.Locale;
 import java.util.Scanner;
 
