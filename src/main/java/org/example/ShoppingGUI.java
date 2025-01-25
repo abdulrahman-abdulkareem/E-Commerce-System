@@ -170,7 +170,8 @@ public class ShoppingGUI extends JFrame {
     /**
      * Set up the product table with its initial settings.
      */
-
+ private static final String FONT_ARIAL = "Arial";
+ 
     public void setupProductTable() {
         tableModel = new DefaultTableModel(columnNames, 0) {
             @Override
@@ -178,6 +179,8 @@ public class ShoppingGUI extends JFrame {
                 return false; // Make table cells non-editable
             }
         };
+
+       
 
         productTable = new JTable(tableModel);
         TableCellRenderer headerRenderer = productTable.getTableHeader().getDefaultRenderer();
@@ -217,7 +220,7 @@ public class ShoppingGUI extends JFrame {
         productTable.setForeground(new Color(50, 50, 50)); // Dark text
         productTable.setGridColor(new Color(200, 200, 200)); // Light gray grid
         productTable.setSelectionBackground(new Color(180, 220, 240)); // Light blue selection
-        productTable.setFont(new Font("Arial", Font.PLAIN, 14));
+        productTable.setFont(new Font(FONT_ARIAL, Font.PLAIN, 14));
         productTable.setRowHeight(50);
 
 
@@ -556,7 +559,8 @@ public class ShoppingGUI extends JFrame {
      * @param event - The ActionEvent object representing the button click event.
      */
 
-    private void showShoppingCart(ActionEvent event) {
+    @SuppressWarnings("unused")
+    private void showShoppingCart() {
 
         // Calculate the totals and update the cart display
         updateCartDisplay();
