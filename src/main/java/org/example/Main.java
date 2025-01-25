@@ -1,6 +1,8 @@
 package org.example;
 
 import javax.swing.*;
+
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -78,7 +80,7 @@ public class Main {
      */
     private static boolean askIfContinue(Scanner input, String role) {
         System.out.print("Do you want to continue as a " + role + "? (Y/N): ");
-        String response = input.nextLine().trim().toUpperCase();
+        String response = input.nextLine().trim().toUpperCase(Locale.ROOT);
 
         if (response.equals("N")) {
             return false;
