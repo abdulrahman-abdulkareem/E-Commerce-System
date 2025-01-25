@@ -46,7 +46,7 @@ public class User {
      */
 
     private boolean isValidPassword(String password) {
-        String passwordRegex = System.getenv("PASSWORD_REGEX");
+        String passwordRegex = "^(?=.*[0-9]).{8,}$";
         Pattern pattern = Pattern.compile(passwordRegex);
         return pattern.matcher(password).matches();
     }
