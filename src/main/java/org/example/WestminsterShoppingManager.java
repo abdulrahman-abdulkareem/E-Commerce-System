@@ -405,14 +405,12 @@ public class WestminsterShoppingManager implements ShoppingManager {
                         continue; // Skip adding this product
                     }
 
-                    Product product = null;
-                    if ("Electronics".equals(type)) {
-                        int warrantyPeriod = Integer.parseInt(reader.readLine().split(": ")[1].trim());
-                        product = new Electronics(id, name, noOfItems, price, brandOrColor, warrantyPeriod);
-                    } else if ("Clothing".equals(type)) {
-                        String size =reader.readLine().split(": ")[1].trim();;
-                        product = new Clothing(id, name, noOfItems, price, brandOrColor, size);
+                    Clothing product = null; // Declare the object outside the loop
+                    if ("Clothing".equals(type)) {
+                    String size = reader.readLine().split(":")[1].trim();
+                    product = new Clothing(id, name, noOfItems, price, brandOrColor, size);
                     }
+
 
                     if (product != null) {
                         productList.add(product);
